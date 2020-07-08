@@ -3,7 +3,7 @@ entries:
   rabbitmq:
   - apiVersion: v1
     appVersion: 3.7.14
-    created: "2020-07-08T11:14:47.225393+02:00"
+    created: "2020-07-08T11:48:03.392775+02:00"
     description: Message broker that implements the Advanced Message Queuing Protocol
       (AMQP)
     digest: c4d98e244b09490c0022d6535e9d75e46679840a24e1f7684ea28a11a6400f79
@@ -27,6 +27,6 @@ entries:
     sources:
     - https://github.com/bitnami/bitnami-docker-rabbitmq
     urls:
-    - https://github.ibm.com/jesus-arteche/helm-ocp/rabbitmq-5.5.0.tgz
+    - https://github.com/chechuironman/helm-ocp/rabbitmq-5.5.0.tgz
     version: 5.5.0
-generated: "2020-07-08T11:14:47.22155+02:00"
+generated: "2020-07-08T11:48:03.388358+02:00"
