@@ -1,0 +1,29 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: {{ template "rabbitmq.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ template "rabbitmq.name" . }}
+    helm.sh/chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    app.kubernetes.io/instance: "{{ .Release.Name }}"
+    release: "{{ .Release.Name }}"
+    app.kubernetes.io/managed-by: "{{ .Release.Service }}"
+{{- if or .Values.service.annotations .Values.metrics.enabled }}
+  annotations:
+  {{- end }}
+  {{- if .Values.service.annotations }}
+  {{ toYaml .Values.service.annotations | indent 4 }}
+  {{- end }}
+  {{- if .Values.metrics.enabled }}
+  {{ toYaml .Values.metrics.annotations | indent 4 }}
+  {{- end }}
+spec:
+  host: {{.Values.rabbitmq.route}}
+  to:
+    kind: Service
+    name: rabbit-00-inst-rabbitmq
+    weight: 100
+  port:
+    targetPort: stats
+  wildcardPolicy: None
+
