@@ -8,6 +8,7 @@ route:
 global:
   imageRegistry: null
   imagePullSecrets: null
+  route: null
 
 ## Bitnami RabbitMQ image version
 ## ref: https://hub.docker.com/r/bitnami/rabbitmq/tags/
