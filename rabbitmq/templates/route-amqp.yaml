@@ -18,12 +18,11 @@ metadata:
   {{ toYaml .Values.metrics.annotations | indent 4 }}
   {{- end }}
 spec:
-  host: {{.Values.route.route}}
+  host: "amqqp-"{{ .Values.route.route}}
   to:
     kind: Service
     name: {{ template "rabbitmq.fullname" . }}
     weight: 100
   port:
-    targetPort: stats
+    targetPort: amqp
   wildcardPolicy: None
-
