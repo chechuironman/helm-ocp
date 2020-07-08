@@ -96,7 +96,7 @@ readinessProbe:
 replicas: 1
 resources: {}
 securityContext:
-  enabled: true
+  enabled: false
   fsGroup: 1001
   runAsUser: 1001
 service:
