@@ -18,7 +18,7 @@ metadata:
   {{ toYaml .Values.metrics.annotations | indent 4 }}
   {{- end }}
 spec:
-  host: "mngmnt-"{{ .Values.route.route}}
+  host: {{ .Values.route.route-mngmnt}}
   to:
     kind: Service
     name: {{ template "rabbitmq.fullname" . }}
