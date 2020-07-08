@@ -63,8 +63,6 @@ spec:
         image: "{{ template "rabbitmq.volumePermissions.image" . }}"
         imagePullPolicy: {{ default "" .Values.volumePermissions.image.pullPolicy | quote }}
         command: ["/bin/chown", "-R", "{{ .Values.securityContext.runAsUser }}:{{ .Values.securityContext.fsGroup }}", "{{ .Values.persistence.path }}"]
-        securityContext:
-          runAsUser: 
         resources:
 {{ toYaml .Values.volumePermissions.resources | indent 10 }}
         volumeMounts:
