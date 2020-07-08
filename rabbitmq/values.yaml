@@ -1,4 +1,6 @@
 affinity: {}
+route:
+  route: null
 global:
   imagePullSecrets: null
   imageRegistry: null
@@ -80,7 +82,6 @@ rabbitmq:
   password: null
   plugins: rabbitmq_management rabbitmq_peer_discovery_k8s
   rabbitmqClusterNodeName: null
-  route: null
   ulimitNofiles: "65536"
   username: user
 rbacEnabled: true
