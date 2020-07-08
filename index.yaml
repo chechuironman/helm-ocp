@@ -27,6 +27,6 @@ entries:
     sources:
     - https://github.com/bitnami/bitnami-docker-rabbitmq
     urls:
-    - https://github.com/chechuironman/helm-ocp/rabbitmq-5.5.0.tgz
+    - https://raw.githubusercontent.com/chechuironman/helm-ocp/master/rabbitmq-5.5.0.tgz
     version: 5.5.0
 generated: "2020-07-08T11:48:03.388358+02:00"
