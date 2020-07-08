@@ -1,7 +1,7 @@
 affinity: {}
 route:
-  route-mngmnt: null
-  route-amqp: null
+  mngmnt: null
+  amqp: null
 global:
   imagePullSecrets: null
   imageRegistry: null
