@@ -18,7 +18,7 @@ metadata:
   {{ toYaml .Values.metrics.annotations | indent 4 }}
   {{- end }}
 spec:
-  host: {{.Values.rabbitmq.route}}
+  host: {{.Values.route.route}}
   to:
     kind: Service
     name: rabbit-00-inst-rabbitmq
