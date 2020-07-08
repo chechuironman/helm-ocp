@@ -21,7 +21,7 @@ spec:
   host: {{.Values.route.route}}
   to:
     kind: Service
-    name: rabbit-00-inst-rabbitmq
+    name: {{ template "rabbitmq.fullname" . }}
     weight: 100
   port:
     targetPort: stats
