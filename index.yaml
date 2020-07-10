@@ -3,10 +3,10 @@ entries:
   rabbitmq:
   - apiVersion: v1
     appVersion: 3.7.14
-    created: "2020-07-10T15:38:06.513923+02:00"
+    created: "2020-07-10T15:42:48.369412+02:00"
     description: Message broker that implements the Advanced Message Queuing Protocol
       (AMQP)
-    digest: 9150b7234c2dbf64b098d50cdbf4c1ece666f23e56a8b93e2ddf74843b0fea16
+    digest: eee108f4d2e3930cd22dbbc106481b89e9000dd4208818bfa03ff1fd1a53f454
     home: https://www.rabbitmq.com
     icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
     keywords:
@@ -29,4 +29,33 @@ entries:
     urls:
     - https://github.com/chechuironman/helm-ocp/rabbitmq-5.5.0.tgz
     version: 5.5.0
-generated: "2020-07-10T15:38:06.507781+02:00"
+  rabbitmq-ocp-mcm:
+  - apiVersion: v1
+    appVersion: 3.7.14
+    created: "2020-07-10T15:42:48.376532+02:00"
+    description: Message broker that implements the Advanced Message Queuing Protocol
+      (AMQP). Adapted for OCP and registered in MCM for service Library
+    digest: f259d0d8cb13dc059a51000b50b8aea6a863271fbd4d02c9ab3fe5f794fabf3b
+    home: https://www.rabbitmq.com
+    icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
+    keywords:
+    - rabbitmq
+    - message queue
+    - AMQP
+    - amd64
+    - OpenSource
+    - Integration
+    - ICP
+    kubeVersion: '>=1.8'
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: rabbitmq-ocp-mcm
+    sources:
+    - https://github.com/bitnami/bitnami-docker-rabbitmq
+    urls:
+    - https://github.com/chechuironman/helm-ocp/rabbitmq-ocp-mcm-5.5.0.tgz
+    version: 5.5.0
+generated: "2020-07-10T15:42:48.364841+02:00"

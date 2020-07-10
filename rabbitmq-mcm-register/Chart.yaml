@@ -1,7 +1,7 @@
 apiVersion: v1
 appVersion: 3.7.14
 description: Message broker that implements the Advanced Message Queuing Protocol
-  (AMQP)
+  (AMQP). Adapted for OCP and registered in MCM for service Library
 home: https://www.rabbitmq.com
 icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
 keywords:
@@ -18,7 +18,7 @@ maintainers:
   name: Bitnami
 - email: cedric@desaintmartin.fr
   name: desaintmartin
-name: rabbitmq
+name: rabbitmq-ocp-mcm
 sources:
 - https://github.com/bitnami/bitnami-docker-rabbitmq
 version: 5.5.0
