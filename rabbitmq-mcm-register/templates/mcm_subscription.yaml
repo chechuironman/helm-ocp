@@ -1,0 +1,25 @@
+apiVersion: app.ibm.com/v1alpha1
+kind: Subscription
+metadata:
+  labels:
+    app: {{ template "rabbitmq.fullname" . }}
+  name: {{ template "rabbitmq.fullname" . }}
+  namespace: rabbit-mq
+spec:
+  name: rabbitmq
+  channel: local-repo-channel/local-repo-channel
+  packageFilter:
+    version: "5.5.0"
+  placement:
+    placementRef:
+      name: rabbit-mq-clusters
+      kind: PlacementRule
+  packageOverrides:
+  - packageName: rabbitmq
+    packageOverrides:
+    - path: spec.releaseName
+      value: rabbit-mq-application-deploy
+    - path: spec.values
+      value: |
+        persistence:
+          enabled: false
