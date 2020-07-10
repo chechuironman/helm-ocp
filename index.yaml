@@ -3,7 +3,7 @@ entries:
   rabbitmq:
   - apiVersion: v1
     appVersion: 3.7.14
-    created: "2020-07-10T16:00:12.585056+02:00"
+    created: "2020-07-10T16:01:30.615169+02:00"
     description: Message broker that implements the Advanced Message Queuing Protocol
       (AMQP)
     digest: eee108f4d2e3930cd22dbbc106481b89e9000dd4208818bfa03ff1fd1a53f454
@@ -29,4 +29,4 @@ entries:
     urls:
     - https://github.com/chechuironman/helm-ocp/rabbitmq-5.5.0.tgz
     version: 5.5.0
-generated: "2020-07-10T16:00:12.580468+02:00"
+generated: "2020-07-10T16:01:30.61276+02:00"
