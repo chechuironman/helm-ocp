@@ -1,0 +1,10 @@
+apiVersion: app.ibm.com/v1alpha1
+kind: PlacementRule
+metadata:
+  name: {{ template "rabbitmq.fullname" . }}
+  namespace: rabbit-mq
+spec:
+  clusterLabels:
+    matchLabels:
+      deploy-rabbit-mq: use
+  clusterReplicas: 2
